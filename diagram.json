@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Simran",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-c3-devkitm-1", "id": "esp", "top": 47.7, "left": 53.82, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": 176.62, "left": -218.48, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 188.6,
+      "left": -57.6,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 15.8,
+      "left": -67.2,
+      "attrs": { "color": "green", "xray": "1", "bounce": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "imu1:VCC", "esp:3V3.1", "red", [ "v0" ] ],
+    [ "imu1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "esp:9", "imu1:SCL", "green", [ "h27.52", "v124.8", "h-144", "v-96", "h-38.4" ] ],
+    [ "btn2:2.r", "esp:GND.2", "black", [ "h0.2", "v67.4" ] ],
+    [ "btn1:1.r", "esp:10", "gold", [ "v0" ] ],
+    [ "btn1:2.r", "esp:GND.4", "black", [ "h9.8", "v-47.8" ] ],
+    [ "btn2:1.r", "esp:3", "gold", [ "v0", "h19.4", "v76.8", "h38.4" ] ],
+    [ "esp:8", "imu1:SDA", "green", [ "h56.32", "v144", "h-470.4", "v-115.2", "h95.92" ] ],
+    [ "imu1:AD0", "esp:GND.3", "black", [ "v-57.6", "h239.98", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
