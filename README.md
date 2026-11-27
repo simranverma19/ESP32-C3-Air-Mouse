@@ -32,7 +32,7 @@ An air mouse project using an ESP32-C3, MPU6050 motion sensor, and two push butt
 
 ### Wokwi circuit
 
-![Wokwi circuit](images/circuit.png)
+![Wokwi circuit](images/esp32 c3 air mouse circuit.png)
 
 ### Serial Monitor output
 
