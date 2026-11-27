@@ -36,7 +36,7 @@ An air mouse project using an ESP32-C3, MPU6050 motion sensor, and two push butt
 
 ### Serial Monitor output
 
-![Serial Monitor output](images/Mouse_rotation.png)
+![Serial Monitor output](images/mouse_rotation.png)
 
 ## How to run
 
